@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>tasks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<script>
+    ducument.addEventListener('DOMContentLoaded', function (){
+        document.querySelector('form').onsubmit= () =>{
+            const task=document.querySelector('#tasks').value;
+            
+            document.addelement('li')
+            inner.html('li')=task
+
+
+
+
+docunent.querySelector('#tasks').append (task);
+
+//clear input field
+
+document.querySelector('#tasks').value='';
+
+document.querySelector('#submit').disabled=true;
+
+document.querySelector('#tasks').onkeyup= ()=>{
+
+    if (document.querySelector('#submit').value.length>0)
+    {
+    document.querySelector('#submit').disabled= false;
+    }
+    else
+    {
+        document.querySelector('#submit').disabled=true;
+    }
+}
+            //stop from submitting
+            return false;
+
+        }
+    })
+</script>
+</head>
+<body>
+
+<h1>Tasks</h1>
+<ul id="tasks"></ul>
+<form>
+    <input type="text" id="tasks" placeholder="Enter tesks"></input>
+    <input type="submit" id="submit">
+</form>
+
+</body>
+</html>

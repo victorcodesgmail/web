@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    print("hello, world\n")
+}
+get_string("What is your name?\n");
+
+// install gcc

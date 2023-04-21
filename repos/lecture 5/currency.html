@@ -1,0 +1,54 @@
+<!Doctype html>
+<html lang=""en>
+    <head>
+        <script>
+            document.addEventListener('DOMContentloaded', function () {
+
+                document.querySelector('form').onsubmit = function() {
+                    fetch=('https')
+              
+                //convert into json
+               
+                
+                .then(response =>response.json())
+
+                //display in console
+                .then(data=> {
+                    const currency=document.querySelector('#currency').value;
+                const rate=data.rates.[currency];
+
+                if (rate !== undefined) {
+                    document.querySelector('#result').innerHTML='1 US dollar is equal to ${#rate.to fixed3} [currency].';
+
+                }
+                else{
+                    document.querySelector('result').innerHTML='invalid currency';
+                }
+                document.querySelector('body').innerHTML='1 US dollar is equal to ${rate.to fixed3} EUR.';
+                });
+            .catch(error=>{
+                console.log('Error:'=>{
+                    console.log('Error', error);
+                })
+            })
+
+                        }}
+                        return false;
+                        
+                        )
+                        
+                    ;
+
+
+        </script>
+        <title>Currency exchange</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="currency" placeholder="Currency">
+            <input type="submit" value=""convert >
+        </form>
+        <div id="results">
+
+        </div>
+</html>
